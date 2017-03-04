@@ -1,0 +1,7 @@
+Three relations involved for these exercise: Movie, Reviewer, Rating
+Question 2: Find all years that have a movie that received a rating of 4 or 5 and sort them in increaing order:
+
+select year
+from Movie
+where mID IN (select mID from Rating where stars IN (4,5))
+order by year asc
